@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
+:root {
+
+  /* Colors */
+
+  --default-color: #fff;
+  --dafult-color-2: #000;
+  --sky-blue-gradient: #6ab7f5;
+
+  --gray-100: #aaa;
+  --gray-200: #888;
+  --gray-300: #444;
+  --gray-400: #3a444d;
+  --gray-500: #333;
+  --gray-600: #222;
+
+  /* Font */
+
+  --oxanium-font: "Oxanium";
+}
+
+
+
+/*  RESET  */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Oxanium";
+    font-family: var(--oxanium-font);
 }
+
+/* main and body */
 
 main  {
     display: inline-block;
@@ -16,9 +42,11 @@ main  {
 
 body {
     text-align: center;
-    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    background: linear-gradient(to bottom, var(--sky-blue-gradient), var(--default-color));
     min-height: 100vh;
 }
+
+/* Pokemon (img and informations) */
 
 .pokedex {
     width: 100%;
@@ -36,16 +64,18 @@ body {
 .pokemon_data {
     position: absolute;
     font-size: 600;
-    color: #aaa;
+    color: var(--gray-100);
     top: 54.5%;
     right: 27%;
     font-size: clamp(10px, 5vw, 25px);
 }
 
 .pokemon_name {
-    color: #3a444d;
+    color: var(--gray-400);
     text-transform: capitalize;
 }
+
+/* FORM  */
 
 .form {
     position: absolute;
@@ -58,12 +88,16 @@ body {
     width: 100%;
     padding: 4%;
     outline: none;
-    border: 2px solid #333;
+    border: 2px solid var(--gray-500);
     border-radius: 5px;
     font-weight: 600;
-    color : #3a444d;
+    color : var(--gray-400);
     font-size: clamp(8px, 5vw, 1rem);
-    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+    box-shadow: -3px 4px 0 var(--gray-300), -5px 7px 0 var(--gray-500);
+}
+
+.input_search:disabled {
+  display: none;
 }
 
 .buttons {
@@ -79,15 +113,15 @@ body {
 .button {
     width: 50%;
     padding: 4%;
-    border: 2px solid #000;
+    border: 2px solid var(--dafult-color-2);
     font-size: clamp(8px, 5vw, 1rem);
     font-weight: 600;
-    color: white;
-    background-color: #444;
-    box-shadow: -2px 3px 0 #222, -4 6px 0 #000;
+    color: var(--default-color);
+    background-color: var(--gray-300);
+    box-shadow: -2px 3px 0 var(--gray-600), -4 6px 0 var(--dafult-color-2);
 
 }
  .button:active {
-    box-shadow: inset -4px 4px 0 #222;
+    box-shadow: inset -4px 4px 0 var(--gray-600);
     font-size: 0.9rem;
  }
