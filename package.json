@@ -11,9 +11,9 @@
     "url": "git+https://github.com/HNunes22/PokemonV1.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hugo Nunes",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/HNunes22/PokemonV1/issues"
   },
