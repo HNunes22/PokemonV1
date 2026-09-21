@@ -1,10 +1,8 @@
 const pokemonName = document.querySelector('.pokemon_name');
 const pokemonId = document.querySelector('.pokemon_number');
 const pokemonImg = document.querySelector('.pokemon_image');
-/*
 const pokemonForm = document.querySelector('.form');
-const pokemonInput = document.querySelector('.input__search');
-*/
+const pokemonInput = document.querySelector('.input_search');
 const buttonPrev = document.querySelector('.btn-prev');
 const buttonNext = document.querySelector('.btn-next');
 
@@ -31,7 +29,6 @@ async function renderPokemon(pokemon) {
     pokemonName.innerHTML = "Loading...";
     pokemonId.innerHTML = '';
     const pokemonDatas = await searchPokemon(pokemon);
-    console.log(pokemonDatas);
 
     if(!pokemonDatas) throw new Error("Pokemon Not Found");
 
@@ -51,13 +48,13 @@ async function renderPokemon(pokemon) {
 // Events Listener
 
   // Procurar pokemon pelo nome ou id
-  /*
+
 pokemonForm.addEventListener('submit', (event) => {
   event.preventDefault();
-
-  renderPokemon(pokemonInput.value.toLowerCase());
+  const pokemonSubmit = pokemonInput.value.toLowerCase();
+  renderPokemon(pokemonSubmit);
 });
-*/
+
 
   // Botão de Anterior
 

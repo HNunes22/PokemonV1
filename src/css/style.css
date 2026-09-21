@@ -31,19 +31,21 @@
     font-family: var(--oxanium-font);
 }
 
+
+
 /* main and body */
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, var(--sky-blue-gradient), var(--default-color));
+    min-height: 100vh;
+}
 
 main  {
     display: inline-block;
     margin-top: 2%;
     padding: 15px;
     position: relative;
-}
-
-body {
-    text-align: center;
-    background: linear-gradient(to bottom, var(--sky-blue-gradient), var(--default-color));
-    min-height: 100vh;
 }
 
 /* Pokemon (img and informations) */
