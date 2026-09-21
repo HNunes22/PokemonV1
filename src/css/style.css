@@ -48,6 +48,12 @@ main  {
     position: relative;
 }
 
+@media (min-width: 375px) and (max-width: 667px) {
+      main {
+        margin-top: 15%;
+      }
+    }
+
 /* Pokemon (img and informations) */
 
 .pokedex {
